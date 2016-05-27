@@ -1,5 +1,10 @@
 ---
 
 - name: setup for flongo app
-  user: vagrant---
+  remote_user: vagrant
+  become: yes
+  become_method: sudo
+
+  roles:
+    - flongo
 
