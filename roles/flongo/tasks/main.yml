@@ -16,7 +16,7 @@
 
 - name: create docker network named flongo
   command: docker network create flongo
-  when: "'flongo' no in docker_networks.stdout"
+  when: "'flongo' not in docker_networks.stdout"
 
 - name: copy mongod service file
   template: src=mongod.j2 dest=/etc/systemd/system/mongodb.service
