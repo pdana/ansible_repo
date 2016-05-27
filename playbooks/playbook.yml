@@ -1,0 +1,5 @@
+---
+
+- name: setup for flongo app
+  user: vagrant---
+
